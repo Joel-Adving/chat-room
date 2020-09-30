@@ -68,7 +68,7 @@ function ChatRoom() {
         <div ref={dummy}></div>
       </main>
       <div className="footer-container">
-      <form className="message-subit-container" onSubmit={SendMessage}>
+      <form className="message-submit-container" onSubmit={SendMessage}>
         <input className="message-input"
           placeholder="Aa.."
           value={formValue}
@@ -88,9 +88,7 @@ function ChatMessage(props) {
   return (
     <div className={`message ${messageClass}`}>
       <img alt="" src={photoURL} />
-      <div className="displayed-text-message-container">
-      <h2 className="displayed-text-message">{text}</h2>
-      </div>
+      <p className="displayed-text-message">{text}</p>
     </div>
   );
 }
@@ -111,7 +109,7 @@ function SignIn() {
 
 function SignOut() {
   return auth.currentUser && (
-    <button className="signout-btn" onClick={() => auth.signOut()}>Sign Out</button>
+    <button className="signout-btn" onClick={() => auth.signOut()}>Sign out</button>
   )
 }
 
